@@ -16,14 +16,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: App
-        run: g++ Source.cpp -o ${{env.app}}_${{runner.os}}
+        run: g++ Source.cpp -o ${{env.app_name}}_${{runner.os}}
 
 
       - name: Upload Artefact
         uses: dowlaod-artifact@v3
         with:
           name: my-artefact
-          path: ${{env.app}}-${{runner.os}}
+          path: ${{env.app_name}}-${{runner.os}}
           
           
   telegram:
