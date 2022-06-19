@@ -2,9 +2,11 @@ name: CI
 
 on: 
   push:
-    branches: [ "main" ]
+    branches: [ "
+sorokinaanna-lab-patch-1" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "
+sorokinaanna-lab-patch-1" ]
   
 env:
   app_name: app.exe
@@ -15,6 +17,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      
       - name: App
         run: g++ Source.cpp -o ${{env.app_name}}_${{runner.os}}
 
