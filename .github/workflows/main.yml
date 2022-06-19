@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
   
 env:
-  app_name: app_${{github.run_number}}
+  app_name: app.exe
 
 jobs:
   build:   
