@@ -1,5 +1,5 @@
 
-name: CI
+name: main
 
 on: [push, pull_request]
   
@@ -42,7 +42,7 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{secrets.TELEGRAM_TOKEN }}
-          
+          message: Present
           document: artifacts/**
         
         
