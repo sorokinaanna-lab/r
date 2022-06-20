@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: artefact_fol
-          path: "*.exe"
+          path: ${{env.app_name}}-${{ runner.os}}**
           
           
   telegram:
