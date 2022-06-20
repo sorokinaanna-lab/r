@@ -24,8 +24,8 @@ jobs:
       - name: Upload Artefact
         uses: actions/upload-artifact@v3
         with:
-          name: my-artefact
-          path: ${{env.app_name}}-${{runner.os}}
+          name: artefact_fol
+          path: ${{env.app_name}}
           
           
   telegram:
@@ -39,7 +39,7 @@ jobs:
       #download
       - uses: actions/download-artifact@v3
         with:
-          name: my-artefact
+          name: artefact_fol
           path: artifacts
           
       - name: Send to TG
