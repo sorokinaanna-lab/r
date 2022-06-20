@@ -2,11 +2,9 @@ name: CI
 
 on: 
   push:
-    branches: [ "
-sorokinaanna-lab-patch-1" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "
-sorokinaanna-lab-patch-1" ]
+    branches: [ "main" ]
   
 env:
   app_name: app.exe
