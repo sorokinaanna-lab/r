@@ -1,16 +1,21 @@
+name: CI
 
-name: main
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
-on: [push, pull_request]
-  
-env:
-  app_name: app.exe
-
+ 
 jobs:
-  build:   
+  
+  build:
+    
     runs-on: ubuntu-latest
 
+    
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - name: Build
 
@@ -18,7 +23,7 @@ jobs:
 
 
       - name: Upload Artefact
-        uses: dowlaod-artifact@v3
+        uses: actions/dowlaod-artifact@v3
         with:
           name: my-artefact
           path: ${{env.app_name}}-${{runner.os}}
