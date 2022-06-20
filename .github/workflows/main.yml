@@ -8,7 +8,7 @@ on:
 
  
 env:
-  app_name: app_cc.exe
+  app_name: ubuntu-latest
  
 jobs:
   
