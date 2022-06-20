@@ -39,7 +39,7 @@ jobs:
       #download
       - uses: actions/download-artifact@v3
         with:
-          name: my-artefact
+          name: artifacts_folder
           path: artifacts
           
       - name: Send to TG
